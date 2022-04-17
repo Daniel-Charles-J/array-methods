@@ -572,10 +572,10 @@ isAvailable:true
     let vegetableType=superMarket.filter((item)=>{
         return item.type==="vegetable"
     });
-    let avgePrice= vegetableType.reduce((initialValue,avg)=>{
+    let avgePrice= vegetableType.reduce((initialValue,avgePrice)=>{
         return (price + avgePrice.price);
     },0)
-    document.write(avgVegetablePrice/vegetablePrice.length);
+    document.write(avgePrice/vegetableType.length);
 
      // Filter the elements of type: ‘fruit’ and add new property ‘isAvailable: true’
 
@@ -589,6 +589,27 @@ isAvailable:true
       }
     });
     console.log(updatedFruit);
+
+    // Filter the elements of type: ‘dairy’ and ‘vegetable’ and add new property ‘isAvailable: true’ to the filtered elements under type: ‘dairy’ and add new property ‘isAvailable: false’ to the filtered elements under type: ‘vegetable’
+
+    let dairyVegetable = superMarket.filter((a)=>a.type == "dairy" || a.type == "vegetable");
+    console.log(dairyVegetable); 
+
+    let updatedDairy = dairyVegetable.filter((item)=>item.type==="dairy").map((item)=>{
+        return {
+        ...item,
+        isAvailable : true
+      }
+    });
+    console.log(updatedDairy);
+
+    let updatedVegetable = dairyVegetable.filter((item)=>item.type==="vegetable").map((item)=>{
+        return {
+        ...item,
+        isAvailable : false
+      }
+    });
+    console.log(updatedVegetable);
     </script>
 </body>
 </html>
