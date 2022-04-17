@@ -557,6 +557,38 @@ isAvailable:true
     }, 0)
     document.write(avgPrice);
 
+    
+    // Mix of array methods:
+    // Filter the elements of type: ‘dairy’ and calculate averageRatings
+
+    let dairyFilter = superMarket.filter((dairy)=> dairy.type == "dairy");
+    console.log(dairyFilter);
+
+    let avgDairyRating = dairyFilter.reduce((rating, avgRating)=> {
+      return rating + avgRating.rating;
+    }, 0)
+    document.write(avgDairyRating/dairyFilter.length);
+
+    let vegetableType=superMarket.filter((item)=>{
+        return item.type==="vegetable"
+    });
+    let avgePrice= vegetableType.reduce((initialValue,avg)=>{
+        return (price + avgePrice.price);
+    },0)
+    document.write(avgVegetablePrice/vegetablePrice.length);
+
+     // Filter the elements of type: ‘fruit’ and add new property ‘isAvailable: true’
+
+     let fruit = superMarket.filter((fruits)=>fruits.type == "fruit");
+    console.log(fruit);
+
+    let updatedFruit = fruit.map((fruits) => {
+      return {
+        ...fruits,
+        isAvailable: true
+      }
+    });
+    console.log(updatedFruit);
     </script>
 </body>
 </html>
