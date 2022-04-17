@@ -460,6 +460,38 @@
       "price": 25.62,
       "rating": 3
     }];
+
+    // Find()
+    // Find the element with rating >= 3
+    let ratings=superMarket.find((rating)=>{
+        return rating.rating >=3
+    });
+    document.write(ratings.title);
+
+    // Find the element with type ‘vegetable’
+    let vegetable = superMarket.find((vegetables) => vegetables.type == "vegetable");
+    document.write(vegetable.title);
+
+    document.write("<br>");
+
+    // Find the element with price < 15
+    let price = superMarket.find((prices) => prices.price < 15);
+    document.write(price.title);
+
+    document.write("<br>");
+
+    //Find the element with title which contains the word ‘Lemon’
+    let lemon = superMarket.find((lemons) => lemons.title.includes('Lemon'));
+    document.write(lemon.title);
+
+    document.write("<br>");
+
+    // Find the element with height = 450 and width = 450
+    let heightWidth = superMarket.find((a) => a.width == 450 && a.height == 450);
+    document.write(heightWidth.title);
+
+    // Filter()
+    // Filter the elements with rating < 2
     </script>
 </body>
 </html>
