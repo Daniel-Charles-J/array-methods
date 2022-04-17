@@ -492,6 +492,32 @@
 
     // Filter()
     // Filter the elements with rating < 2
+
+    let ratingThanTwo=superMarket.filter((ratings)=>{
+        return ratings.rating <2;
+    })
+    console.log(ratingThanTwo);
+
+    // Filter the elements with type ‘dairy’
+    let dairy = superMarket.filter((dairys)=> dairys.type == "dairy");
+    console.log(dairy);
+
+    // Filter the elements with price >20
+    let priceLessThan20 = superMarket.filter((prices) => prices.price > 20);
+    console.log(priceLessThan20);
+
+     // Filter the elements with title which contains the word ‘with
+     let titleWith = superMarket.filter((title) => title.title.includes("with"));
+    console.log(titleWith);
+
+    // Filter the elements with description which contains the word ‘with’
+    let descriptionWith = superMarket.filter((a) => a.description.includes("with"));
+    console.log(descriptionWith);
+
+    // Filter the elements with height = 600 and width = 400
+    let widthHeight;
+    console.log(widthHeight = superMarket.filter((a) => a.width == 400 && a.height == 600));
+    // document.write(heightWidth);
     </script>
 </body>
 </html>
