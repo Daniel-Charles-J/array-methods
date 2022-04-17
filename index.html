@@ -518,6 +518,45 @@
     let widthHeight;
     console.log(widthHeight = superMarket.filter((a) => a.width == 400 && a.height == 600));
     // document.write(heightWidth);
+
+    // Map()
+    // Add the property ‘isAvailable: true’ to all the elements
+
+    let propertyAdded=superMarket.map((item)=>{
+        return{
+...item,
+isAvailable:true
+        }
+    })
+    console.log(propertyAdded);
+
+     // reduce()
+    // Calculate the averageRatings of all the element
+    let avgRating = superMarket.reduce((rating, avgRating)=> {
+      return (rating + avgRating.rating)/2;
+    }, 0)
+    document.write(avgRating);
+
+     // Calculate the averageHeight of all the element
+     let avgHeight = superMarket.reduce((height, avgHeight)=> {
+      return (height + avgHeight.height)/2;
+    }, 0)
+    document.write(avgHeight);
+
+
+    // Calculate the averageWidth of all the element
+    let avgWidth = superMarket.reduce((width, avgWidth)=> {
+      return (width + avgWidth.width)/2;
+    }, 0)
+    document.write(avgWidth);
+
+
+    // Calculate the averagePrice of all the element
+    let avgPrice = superMarket.reduce((price, avgPrice)=> {
+      return (price + avgPrice.price)/2;
+    }, 0)
+    document.write(avgPrice);
+
     </script>
 </body>
 </html>
